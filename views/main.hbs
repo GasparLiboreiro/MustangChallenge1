@@ -1,0 +1,43 @@
+<div class="flex justify-center">
+    <table>
+        <thead>
+            <tr>
+                <th>Pos</th>
+                <th>Equipo</th>
+                <th>PJ</th>
+                <th class="no_importante">G</th>
+                <th class="no_importante">E</th>
+                <th class="no_importante">P</th>
+                <th class="no_importante">GF</th>
+                <th class="no_importante">GC</th>
+                <th>DG</th>
+                <th>Pts</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each lista}}
+                {{#if this.ascender}}
+                    <tr class="best">
+                {{else}}
+                    {{#if this.descender}}
+                        <tr class="worst">
+                    {{else}}
+                        <tr>
+                    {{/if}}
+                {{/if}}
+                    <td>{{this.rank}}</td>
+                    <td class="text-left"><img src="{{this.img}}" alt="{{this._id}} img" title="escudo de {{this._id}}" width="24" height="24"> <span>{{this._id}}</span></td>
+                    <td>{{this.pj}}</td>
+                    <td class="no_importante">{{this.g}}</td>
+                    <td class="no_importante">{{this.e}}</td>
+                    <td class="no_importante">{{this.p}}</td>
+                    <td class="no_importante">{{this.gf}}</td>
+                    <td class="no_importante">{{this.gc}}</td>
+                    <td>{{this.dg}}</td>
+                    <td>{{this.pts}}</td>
+                </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</div>
+<div style="display:flex; justify-content:center; color:#FFF;">El diseño grafico <p style="font-size:0.5em; color:#888;">(no)</p>es mi pasión</div>
